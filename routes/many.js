@@ -4,7 +4,6 @@ const fs = require('fs')
 const axios = require('axios')
 
 router.post('/', function(req, res, next) {
-    console.log(req.body);
 	var paramsStr = JSON.stringify(req.body);
 	var apisJSON = fs.readFileSync(`${__dirname}/../configs/urls.json`);
     var apis = JSON.parse(apisJSON);
